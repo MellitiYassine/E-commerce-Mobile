@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondFragment">
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#FFCCBC"
+        android:backgroundTintMode="add"
+        android:text="Back"
+        app:layout_constraintEnd_toStartOf="@+id/validate_button"
+        tools:layout_editor_absoluteY="681dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+android:id="@+id/recyclerView_toSelect"
+android:layout_width="match_parent"
+android:layout_height="0dp"
+android:textAlignment="center"
+app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+app:layout_constraintBottom_toTopOf="@+id/validate_button"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+tools:listitem="@layout/item_to_select" />
+
+    <Button
+        android:id="@+id/validate_button"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#FFCCBC"
+        android:backgroundTintMode="add"
+        android:text="OK"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/totale_sum"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+
+        android:editable="false"
+
+        android:ems="5"
+        android:inputType="numberDecimal"
+        android:lineSpacingExtra="8sp"
+        android:text="644654.00"
+        android:textAlignment="center"
+        android:textColor="#00887A"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/back_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView_toSelect"
+        tools:ignore="SpeakableTextPresentCheck" />
+</androidx.constraintlayout.widget.ConstraintLayout>
